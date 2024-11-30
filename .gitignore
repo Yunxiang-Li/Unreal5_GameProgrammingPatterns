@@ -1,0 +1,54 @@
+# Rider IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Rider logs and cache
+*.log
+.idea_modules/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/dictionaries
+.idea/libraries/
+
+# Exclude Rider-specific files for Unreal Engine plugins
+*.cppm
+.cache/
+
+# Ignore auto-generated files and folders
+Saved
+Intermediate
+DerivedDataCache
+Build
+Binaries
+Platforms
+
+# Ignore Visual Studio and Xcode project files
+.VC.db
+.VC.VC.opendb
+.sln
+.xcodeproj
+.xcworkspace
+
+# Ignore temporary and backup files
+.log
+.tmp
+.bak
+.lock
+
+# Ignore MacOS system files
+.DS_Store
+.DS_Store
+._
+.Spotlight-V100
+.Trashes
+
+# Ignore crash dumps
+.dmp
+.pdb
+
+# Ignore cache and settings
+DerivedDataCache
