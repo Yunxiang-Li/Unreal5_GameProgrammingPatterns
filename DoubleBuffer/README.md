@@ -1,4 +1,4 @@
-# Double Buffer(Already implemented in Unreal)
+# Double Buffer
 
 ## Summary
 
@@ -32,6 +32,6 @@ In theory, systems could support an infinite number of buffers to maximize effic
 
 ## Double Buffer within Unreal
 
-Unreal Engine, by default, uses a double-buffered system to manage its rendering pipeline. This is implemented via the swap chain, a mechanism provided by graphics APIs like DirectX and Vulkan. The swap chain manages the front and back buffers, ensuring smooth rendering and efficient buffer swapping. While Unreal supports advanced techniques like triple buffering, the default double-buffer system is sufficient for most use cases on modern hardware.
+Unreal Engine, by default, uses a double-buffered system to manage its rendering pipeline. This is implemented via the swap chain, a mechanism provided by graphics APIs like DirectX and Vulkan(can be found with path **<UE_5.0 folder>\Engine\Source\Runtime\Windows\D3D11RHI\**). The swap chain manages the front and back buffers, ensuring smooth rendering and efficient buffer swapping. While Unreal supports advanced techniques like triple buffering, the default double-buffer system is sufficient for most use cases on modern hardware.
 
 By default, Unreal Engine launches using DirectX (though Vulkan is also supported), and the double-buffering process ensures that visuals are smooth and artifacts like tearing are minimized.
