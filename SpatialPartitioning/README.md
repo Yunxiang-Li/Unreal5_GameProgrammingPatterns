@@ -36,7 +36,7 @@ An **octree** is a hierarchical data structure used to partition 3D space. Each 
 
 ### Octree for Rendering/Lighting/Physics
 
-Unreal Engine uses spatial partitioning techniques to optimize rendering, lighting and physics. These techniques include **hierarchical structures**, such as octrees, depending on the system. For instance, one octree within Unreal resides in the `Fscene` class and is used by the render thread to determine quickly whether an object exists in the light’s area of effect. This way, the number of lighting calculations is drastically reduced
+Unreal Engine uses spatial partitioning techniques to optimize rendering, lighting and physics. These techniques include **hierarchical structures**, such as octrees, depending on the system. For instance, one octree within Unreal resides in the `Fscene` class and is used by the render thread to determine quickly whether an object exists in the light’s area of effect. This way, the number of lighting calculations is drastically reduced.
 
 ### World Partition for Large-Scale Worlds
 
@@ -44,7 +44,7 @@ Unreal Engine 5 introduced **World Partition**, a system designed for managing o
 
 **Flat Grid System**:
 - Unlike octrees, World Partition uses a **single-layer grid** to divide the game world into cells.
-- Cells are streamed in and out of memory dynamically based on the player’s position.
+- Cells are streamed in and out of memory dynamically based on the player’s position or objects with streaming source components.
   
 **Integration with Level of Detail (LOD)**:
 - Adjusts the level of detail dynamically for objects based on distance from the player.
