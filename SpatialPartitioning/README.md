@@ -15,15 +15,20 @@ Collision checks among a large number of objects within a vast game world can be
 
 #### 2. Handle Large Objects
 
-- If an object is larger than a single cell or crosses cell boundaries, multiple adjacent cells are grouped into a larger parent cell.
-- This process repeats, creating progressively larger cells until the entire world is represented in a **tree structure**.
+If an object spans multiple cells, it is either:
+- Assigned to the **smallest parent cell** that fully contains it (modern version, common for rendering optimizations).
+- Or **duplicated across multiple child cells** for precise spatial queries (traditional version, common in physics).
 
 #### Tree Structure for Efficiency:
 
-- Each cell is a node in the tree, with smaller cells forming the leaves and larger, grouped cells forming the branches and root.
-- To check for collisions, objects only need to compare with:
-  - Other objects in the same cell.
-  - Objects in directly connected parent or child cells in the tree.
+- Cells are organized into a **hierarchical tree structure** for optimized queries:
+  - Rendering Octree:
+    - A **traditional** octree is used for lighting and rendering, where objects crossing cell boundaries are promoted to the smallest parent cell.
+    - This simplifies traversal and reduces memory overhead for render-related calculations.
+    - the query scope is limited to objects in the same cell and objects in adjacent cells (to account for edge cases).
+  - Physics Octree:
+    - A more **modern** octree or similar structure is likely used for physics collision detection, where boundary-crossing objects may be duplicated or referenced in multiple child cells for greater spatial precision.
+    - the query scope is limited to objects in the same cell and direct parent or child cells.
 
 ## 2D and 3D Spatial Partitioning
 
@@ -34,7 +39,7 @@ Collision checks among a large number of objects within a vast game world can be
 
 ### 1. Octree for Render Optimization
 
-Unreal Engine 5 uses a 3D spatial partitioning structure called an **octree**. The octree divides the game world into cubic regions, where each region is further subdivided into eight smaller cubes along three axes (x, y, z). This hierarchical partitioning is used to optimize **lighting** calculations.
+Unreal Engine 5 uses a **traditional 3D octree** structure to optimize rendering and lighting calculations. The octree divides the game world into cubic regions and recursively subdivides them into eight smaller cubes along the x, y, and z axes. Objects crossing cell boundaries are promoted to the smallest parent cell that fully contains them. This hierarchical partitioning ensures efficient culling for lighting and rendering.
 
 #### Lighting Calculations:
 - The octree resides in the `FScene` class and is primarily used by the render thread.
