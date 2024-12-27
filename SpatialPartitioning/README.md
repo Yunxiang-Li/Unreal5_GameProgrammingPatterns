@@ -41,9 +41,11 @@ Unreal Engine uses spatial partitioning techniques to optimize rendering, lighti
 ### World Partition for Large-Scale Worlds
 
 Unreal Engine 5 introduced **World Partition**, a system designed for managing open worlds efficiently.
+
 **Flat Grid System**:
 - Unlike octrees, World Partition uses a **single-layer grid** to divide the game world into cells.
 - Cells are streamed in and out of memory dynamically based on the player’s position.
+  
 **Integration with Level of Detail (LOD)**:
 - Adjusts the level of detail dynamically for objects based on distance from the player.
 - Reduces rendering cost without sacrificing visual quality.
