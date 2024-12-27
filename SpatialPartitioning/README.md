@@ -27,6 +27,7 @@ An **octree** is a hierarchical data structure used to partition 3D space. Each 
 **Rendering and Lighting**:
 - Objects are promoted to parent nodes to simplify traversal.
 - Often used for visibility culling and determining light influence.
+
 **Physics and Collision Detection**:
 - Objects are referenced in all overlapping nodes for precision.
 - Ensures accurate narrow-phase collision detection.
