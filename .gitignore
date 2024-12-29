@@ -30,7 +30,7 @@ Platforms
 .VC.db
 .VC.VC.opendb
 .sln
-Component/.sln
+Component/*.sln
 .xcodeproj
 .xcworkspace
 
