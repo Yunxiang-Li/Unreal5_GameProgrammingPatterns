@@ -1,54 +1,51 @@
-# Spatial Partitioning:
+# Spatial Partitioning
 
 ## Summary
 
-Collision checks among a large number of objects within a vast game world can be computationally expensive. The raw time complexity of collision detection is approximately O(n^2), and even optimized approaches like O(n*log(n)) can become a bottleneck for large-scale games. **Spatial Partitioning** addresses this issue by dividing the game world into smaller cells and limiting collision checks to objects in the same or neighboring cells, drastically reducing the number of comparisons required.
+Collision checks and rendering computations in a large game world can become computationally expensive. **Spatial Partitioning** divides the game world into smaller, more manageable regions (cells), reducing the number of comparisons required for spatial queries like collision detection, visibility culling, and light influence calculations. This technique helps achieve better performance in games by localizing queries to relevant regions instead of processing the entire game world.
 
 ## Concept
 
 ### Divide the World into Cells
 
-#### 1. Cell Division
+- The game world is divided into smaller cells, each representing a subsection of space.
+- Objects are assigned to these cells based on their position.
 
-- The game world is divided into multiple small cells, each representing a subsection of the world.
-- Objects are assigned to cells based on their position.
+### Handle Large Objects
 
-#### 2. Handle Large Objects
+Large objects spanning multiple cells are handled in two primary ways:
+- **Promotion to Parent Cells**: Assigned to the smallest parent cell that fully contains them, simplifying traversal but reducing precision. Common for rendering and lighting.
+- **Referenced in Multiple Cells**: Duplicated or referenced in all overlapping cells, ensuring precise spatial queries. Common for physics and collision detection.
 
-- If an object is larger than a single cell or crosses cell boundaries, multiple adjacent cells are grouped into a larger parent cell.
-- This process repeats, creating progressively larger cells until the entire world is represented in a **tree structure**.
+### Octree Overview
 
-#### Tree Structure for Efficiency:
+An **octree** is a hierarchical data structure used to partition 3D space. Each cubic region is recursively subdivided into eight smaller cubes (octants).
+####  Benefits
+  - Efficiently reduces the search space for spatial queries.
+  - Useful for dynamic or static objects, with different update strategies.
+####  Applications
+**Rendering and Lighting**:
+- Objects are promoted to parent nodes to simplify traversal.
+- Often used for visibility culling and determining light influence.
 
-- Each cell is a node in the tree, with smaller cells forming the leaves and larger, grouped cells forming the branches and root.
-- To check for collisions, objects only need to compare with:
-  - Other objects in the same cell.
-  - Objects in directly connected parent or child cells in the tree.
-
-## 2D and 3D Spatial Partitioning
-
-- In 2D, this approach often uses a structure called a **quadtree**, where each cell is divided into four smaller quadrants.
-- In 3D, the equivalent is an **octree**, where each cubic region is divided into eight smaller cubes.
+**Physics and Collision Detection**:
+- Objects are referenced in all overlapping nodes for precision.
+- Ensures accurate narrow-phase collision detection.
 
 ## Spatial Partitioning within Unreal
 
-### 1. Octree for Render Optimization
+### Octree for Rendering/Lighting/Physics
 
-Unreal Engine 5 uses a 3D spatial partitioning structure called an **octree**. The octree divides the game world into cubic regions, where each region is further subdivided into eight smaller cubes along three axes (x, y, z). This hierarchical partitioning is used to optimize **lighting** calculations.
+Unreal Engine uses spatial partitioning techniques to optimize rendering, lighting and physics. These techniques include **hierarchical structures**, such as octrees, depending on the system. For instance, one octree within Unreal resides in the `Fscene` class and is used by the render thread to determine quickly whether an object exists in the light’s area of effect. This way, the number of lighting calculations is drastically reduced.
 
-#### Lighting Calculations:
-- The octree resides in the `FScene` class and is primarily used by the render thread.
-- It determines quickly whether an object exists within a light's area of effect, drastically reducing the number of lighting calculations required.
-- By skipping irrelevant regions, the rendering engine avoids unnecessary computation and improves performance.
+### World Partition for Large-Scale Worlds
 
-### 2. World Partition for Large-Scale World
+Unreal Engine 5 introduced **World Partition**, a system designed for managing open worlds efficiently.
 
-Unreal Engine 5 introduces **World Partition**, a system specifically designed to manage large open worlds. It provides:
-
-#### Single-Layer Cell Division:
-- Users define the size of each cell (or "grid") in the world.
-- Unlike the octree, World Partition does not create a hierarchical tree structure. Instead, it uses a **flat**, **single-layer grid** for managing world visibility.
-
-#### Integration with Level of Detail (LOD):
-- World Partition hooks into the LOD system, ensuring that only the necessary level of detail is rendered for objects visible on-screen.
-- Objects farther away appear with lower detail, improving rendering performance without sacrificing visual quality.
+**Flat Grid System**:
+- Unlike octrees, World Partition uses a **single-layer grid** to divide the game world into cells.
+- Cells are streamed in and out of memory dynamically based on the player’s position or objects with streaming source components.
+  
+**Integration with Level of Detail (LOD)**:
+- Adjusts the level of detail dynamically for objects based on distance from the player.
+- Reduces rendering cost without sacrificing visual quality.
