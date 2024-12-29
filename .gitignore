@@ -30,6 +30,7 @@ Platforms
 .VC.db
 .VC.VC.opendb
 .sln
+Component/.sln
 .xcodeproj
 .xcworkspace
 
@@ -52,5 +53,3 @@ Platforms
 
 # Ignore cache and settings
 DerivedDataCache
-
-.sln
