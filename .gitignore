@@ -4,6 +4,7 @@
 *.ipr
 *.iws
 .idea_modules/
+*.vs
 
 # Rider logs and cache
 *.log
