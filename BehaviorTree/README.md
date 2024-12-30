@@ -1,6 +1,6 @@
 # Behavior Tree:
 
-Reused `HealthComponent` class from Component pattern.
+Reused `HealthComponent` class from [Component pattern]([https://yunxiang-li.github.io./#/game-projects](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component))
 
 ## Summary
 The Behavior Tree pattern is a decision-making tool for AI that organizes logic into a tree structure. It uses reusable nodes to evaluate conditions and determine actions dynamically. This approach simplifies complex AI behavior by modularizing tasks and logic into composites and tasks.
@@ -45,9 +45,9 @@ to work.
 3. `BP_CameraPawn`: This is our pawn. It is a simple pawn blueprint with a camera that is set up to be placed directly in the center of the map.
 
 4. `BPI_Units`: This is our Blueprint interface. It contains three functions: `SetMoveLocation`, `Stop`, and `AttackTarget`:
-- `SetMoveLocation` has a vector input, Target Location
-- `AttackTarget` has an object input, TargetToAttack
-- `Stop` is just a function name and does not have any inputs or outputs
+- `SetMoveLocation` has a vector input, Target Location
+- `AttackTarget` has an object input, TargetToAttack
+- `Stop` is just a function name and does not have any inputs or outputs
 
 5. `BP_EliteUnit`: This is our character blueprint. It is the AI character that we are going to be building upon. This Blueprint extends from the Unreal base character class and implements the BPI_Units Blueprint interface. We are making use of the standard mannequin character mesh here.
 
