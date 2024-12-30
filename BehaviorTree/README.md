@@ -49,17 +49,24 @@ to work.
 - `AttackTarget` has an object input, TargetToAttack
 - `Stop` is just a function name and does not have any inputs or outputs
 
-5. `BP_EliteUnit`: This is our character blueprint. It is the AI character that we are going to be building upon. This Blueprint extends from the Unreal base character class and implements the BPI_Units Blueprint interface. We are making use of the standard mannequin character mesh here.
+5. `BP_EliteUnit`: This is our character blueprint. It is the AI character that we are going to be building upon. This Blueprint extends from the Unreal base character class and implements the BPI_Units Blueprint interface. We are making use of the standard mannequin character mesh here.<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BP_EliteUnit_One.png"/> </div>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BP_EliteUnit_Two.png"/> </div>
 
-6. `BP_EnemyUnit`: This is a second character blueprint.
+6. `BP_EnemyUnit`: This is a second character blueprint.<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BP_EnemyUnit.png"/> </div>
 
 7. `AIC_EliteUnit`: child of `AIController`, an AI unit that the player will be able to control. The player will only be able to tell the unit where to move. They will do this by first selecting the unit using a left-click and then
-selecting a desired location for the unit to move to by right-clicking on the floor. The unit will then move to the location. When not moving, the unit will search to see if any enemy units are within a radius of its current location. If it finds an enemy, the unit will then turn to face the enemy and shoot at it.
+selecting a desired location for the unit to move to by right-clicking on the floor. The unit will then move to the location. When not moving, the unit will search to see if any enemy units are within a radius of its current location. If it finds an enemy, the unit will then turn to face the enemy and shoot at it.<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/AIC_EliteUnit.png"/> </div>
 
 8. `BB_EliteUnit`: A Blackboard asset is a shared memory space for AI in Unreal Engine. It stores key-value pairs that represent the AI's knowledge of the world and supports decision-making in Behavior Trees.
 
-9. `BT_EliteUnit`: The overall behavior tree used in this project.
+9. `BT_EliteUnit`: The overall behavior tree used in this project.<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BT_EliteUnit.png"/> </div>
 
-10. `BTT_ShootTarget`: A Blueprint task within behavior tree that enables the character to shoot enemies. It utilizes the **Event Receive Execute AI** node, which runs when the task is executed by an AI Controller and gives direct access to both the AI Controller and the Controlled Pawn, allowing to customize AI-specific logics (e.g., moving to a target or playing animations).
+10. `BTT_ShootTarget`: A Blueprint task within behavior tree that enables the character to shoot enemies. It utilizes the **Event Receive Execute AI** node, which runs when the task is executed by an AI Controller and gives direct access to both the AI Controller and the Controlled Pawn, allowing to customize AI-specific logics (e.g., moving to a target or playing animations).<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BTT_ShootTarget.png"/> </div>
 
-11. `BTS_FindNearestTarget`: A service within behavior tree which finds nearest target.
+11. `BTS_FindNearestTarget`: A service within behavior tree which finds nearest target.<br>
+<div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BTS_FindNearestTarget.png"/> </div>
