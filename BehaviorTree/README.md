@@ -49,7 +49,7 @@ to work.
 - `AttackTarget` has an object input, TargetToAttack
 - `Stop` is just a function name and does not have any inputs or outputs
 
-5. `BP_EliteUnit`: This is our character blueprint. It extends from the Unreal base character class and implements the BPI_Units Blueprint interface. We are making use of the standard mannequin character mesh here.<br>
+5. `BP_EliteUnit`: This is our character blueprint. It extends from the Unreal base character class and implements the `BPI_Units` Blueprint interface. We are making use of the standard mannequin character mesh here.<br>
 <div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BP_EliteUnit_One.png"/> </div>
 <div align="center"> <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/BP_EliteUnit_Two.png"/> </div>
 
