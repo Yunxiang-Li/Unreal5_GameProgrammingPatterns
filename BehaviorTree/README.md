@@ -1,6 +1,6 @@
 # Behavior Tree:
 
-Reused `HealthComponent` class from [Component pattern]([https://yunxiang-li.github.io./#/game-projects](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component))
+Reused `HealthComponent` class from [Component pattern](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component)
 
 ## Summary
 The Behavior Tree pattern is a decision-making tool for AI that organizes logic into a tree structure. It uses reusable nodes to evaluate conditions and determine actions dynamically. This approach simplifies complex AI behavior by modularizing tasks and logic into composites and tasks.
