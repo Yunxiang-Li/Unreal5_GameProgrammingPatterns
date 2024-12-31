@@ -61,11 +61,11 @@ To demonstrate the evolution of these techniques, we explore three iterations of
 
 - **Behavior**: The guard tower continuously rotates its searchlight and performs a sphere trace every frame to detect players.
 - **Issues**:
-1. **Expensive Sphere Traces**: Running a sphere trace every frame for every guard tower consumes significant CPU resources.
-2. **Repeated Getter Calls**: Locations and world references are repeatedly fetched instead of being cached.
-3. **Unoptimized Casting**: Direct casting to classes inflates memory usage when larger classes are involved.
-4. **Gated Polling**: Polling conditions (e.g., player detection) on every frame wastes computational resources when conditions fail.
-5. **Hardcoded Values**: Rotation speed and limits are constants, making them inflexible and frame-rate-dependent.
+  - 1. **Expensive Sphere Traces**: Running a sphere trace every frame for every guard tower consumes significant CPU resources.
+  - 2. **Repeated Getter Calls**: Locations and world references are repeatedly fetched instead of being cached.
+  - 3. **Unoptimized Casting**: Direct casting to classes inflates memory usage when larger classes are involved.
+  - 4. **Gated Polling**: Polling conditions (e.g., player detection) on every frame wastes computational resources when conditions fail.
+  - 5. **Hardcoded Values**: Rotation speed and limits are constants, making them inflexible and frame-rate-dependent.
 
 **Solution**:
 
@@ -84,9 +84,9 @@ To demonstrate the evolution of these techniques, we explore three iterations of
 
 - **Improvements**:
 
-1. Eliminates constant polling for rotation updates.
-2. Introduces **telegraphing**: The curve slows down the rotation near direction changes, signaling the next action to the player.
-3. Designers gain control over behavior by tweaking the Timeline curve.
+  - 1. Eliminates constant polling for rotation updates.
+  - 2. Introduces **telegraphing**: The curve slows down the rotation near direction changes, signaling the next action to the player.
+  - 3. Designers gain control over behavior by tweaking the Timeline curve.
 
 **Limitations**:
 
@@ -103,9 +103,9 @@ To demonstrate the evolution of these techniques, we explore three iterations of
 
 - **Improvements**:
 
-1. **Sphere Collider**: Uses collision events (OnComponentBeginOverlap, OnComponentEndOverlap) to detect player presence instead of running traces every frame.
-2. **Line Trace**: Verifies visibility only when the player is detected, avoiding unnecessary computations.
-3. **Flipped Logic**: Instead of the guard tower querying the world every frame, the world notifies the guard tower only when relevant.
+  - 1. **Sphere Collider**: Uses collision events (OnComponentBeginOverlap, OnComponentEndOverlap) to detect player presence instead of running traces every frame.
+  - 2. **Line Trace**: Verifies visibility only when the player is detected, avoiding unnecessary computations.
+  - 3. **Flipped Logic**: Instead of the guard tower querying the world every frame, the world notifies the guard tower only when relevant.
 
 **Advantages**:
 
