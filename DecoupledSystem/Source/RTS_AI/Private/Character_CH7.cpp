@@ -29,7 +29,7 @@ void ACharacter_CH7::Fire()
 	FHitResult hit(ForceInit);
 	if(UKismetSystemLibrary::LineTraceSingle(GetWorld(), GetActorLocation(), outActors[0]->GetActorLocation(), UEngineTypes::ConvertToTraceType(ECC_Visibility), true, {this}, EDrawDebugTrace::ForDuration, hit, true))
 	{
-		UGameplayStatics::ApplyDamage(outActors[0], 100.f, Controller, this, UDamageType::StaticClass());
+		UGameplayStatics::ApplyDamage(outActors[0], 100.f, Controller, this, UDamageType::StaticClass() );
 	}
 }
 

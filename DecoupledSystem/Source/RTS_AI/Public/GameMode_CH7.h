@@ -5,7 +5,7 @@
 #include "GameMode_CH7.generated.h"
 
 class AAIController_CH7;
-class APlayerController_Ch7;
+class APlayerController_CH7;
 UCLASS(Abstract)
 class RTS_AI_API AGameMode_CH7 : public AGameModeBase
 {
@@ -19,5 +19,11 @@ public:
 
 protected:
 	UFUNCTION()
-	void Handle_ControllerDeath(AController* casuer, int points);
+	void Handle_ControllerDeath(AController* causer, int points);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TObjectPtr<APlayerController_CH7> M_PlayerController;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TArray<TObjectPtr<AAIController_CH7>> M_AIControllers;
 };

@@ -28,7 +28,7 @@ void UHealthComponent::DamageTaken(AActor* damagedActor, float damage, const UDa
 
 	if(_currentHealth <= 0.f)
 	{
-		onComponentDead.Broadcast(instigator);
+		onComponentDead.Broadcast( instigator );
 	} 
 }
 

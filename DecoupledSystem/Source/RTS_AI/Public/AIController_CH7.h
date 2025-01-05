@@ -6,11 +6,24 @@
 
 class AAIUnit_CH7;
 
-
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_TwoParams
+(FControllerDeathSignature, AController*, causer, int, points);
 
 UCLASS(Abstract)
 class RTS_AI_API AAIController_CH7 : public AAIController
 {
 	GENERATED_BODY()
+	
+public:
+	void Init();
 
+	UPROPERTY(BlueprintAssignable)
+	FControllerDeathSignature OnControllerDeath;
+	
+protected:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	TObjectPtr<AAIUnit_CH7> M_Unit;
+
+	UFUNCTION()
+	void Handle_UnitDeath( AController* causer, int points );
 };
