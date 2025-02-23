@@ -35,25 +35,25 @@ I use Unreal5.2.1 and JetBrains Rider for this project under Windows 10 environm
 ## Structure
 
 Details of each project are explain within each project's Readme file.
-1. [HelloPatterns](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/HelloPatterns)
+1. [HelloPatterns](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/HelloPatterns)<br>
    Pure Blueprints project, contains 3 examples about how to optimize certain Blueprints to increase performance.
-2. [DoubleBuffer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DoubleBuffer)
+2. [DoubleBuffer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DoubleBuffer)<br>
    A brief introduction about double buffer pattern.
-3. [Flyweight](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Flyweight)
+3. [Flyweight](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Flyweight)<br>
    A brief introduction about flyweight pattern.
-4. [SpatialPartitioning](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/SpatialPartitioning)
+4. [SpatialPartitioning](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/SpatialPartitioning)<br>
    A brief introduction about spatial partitioning.
-5. [Component](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component)
+5. [Component](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component)<br>
    Create a custom health component which can track health, handle damage events and broadcast two key events.
-6. [Update](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Update)
+6. [Update](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Update)<br>
    A brief introduction about update pattern.
-7. [BehaviorTree](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/BehaviorTree)
+7. [BehaviorTree](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/BehaviorTree)<br>
    Build a behavior tree for a simple real-time strategy (RTS) AI Unit. Introduce various building blocks such as selectors, sequences, decorators, services, and tasks.
-8. [EventDriven](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/EventDriven)
+8. [EventDriven](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/EventDriven)<br>
    Make **3** iterations of one certain implementation to demonstrate techniques of Tick, Timers/Timelines and Event-Driven Systems.
-9. [Observer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Observer)
+9. [Observer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Observer)<br>
    Update previous implemented custom HealthComponent class to demonstrate how event delegates enable anonymous communication, eliminating the need for direct object references.
-10. [DecoupledSystem](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DecoupledSystem)
+10. [DecoupledSystem](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DecoupledSystem)<br>
    Decouple a small system using following rules:
    - Functions for downward communication
    - Events for upward communication
