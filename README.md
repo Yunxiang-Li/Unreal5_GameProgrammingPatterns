@@ -35,9 +35,30 @@ I use Unreal5.2.1 and JetBrains Rider for this project under Windows 10 environm
 ## Structure
 
 Details of each project are explain within each project's Readme file.
-1. [HelloPatterns](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/HelloPatterns/README.md)
+1. [HelloPatterns](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/HelloPatterns)
    Pure Blueprints project, contains 3 examples about how to optimize certain Blueprints to increase performance.
-      
+2. [DoubleBuffer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DoubleBuffer)
+   A brief introduction about double buffer pattern.
+3. [Flyweight](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Flyweight)
+   A brief introduction about flyweight pattern.
+4. [SpatialPartitioning](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/SpatialPartitioning)
+   A brief introduction about spatial partitioning.
+5. [Component](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Component)
+   Create a custom health component which can track health, handle damage events and broadcast two key events.
+6. [Update](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Update)
+   A brief introduction about update pattern.
+7. [BehaviorTree](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/BehaviorTree)
+   Build a behavior tree for a simple real-time strategy (RTS) AI Unit. Introduce various building blocks such as selectors, sequences, decorators, services, and tasks.
+8. [EventDriven](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/EventDriven)
+   Make **3** iterations of one certain implementation to demonstrate techniques of Tick, Timers/Timelines and Event-Driven Systems.
+9. [Observer](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Observer)
+   Update previous implemented custom HealthComponent class to demonstrate how event delegates enable anonymous communication, eliminating the need for direct object references.
+10. [DecoupledSystem](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/DecoupledSystem)
+   Decouple a small system using following rules:
+   - Functions for downward communication
+   - Events for upward communication
+   - Interfaces for horizontal communication.
+       
 ## Maintainers
 
 [@Yunxiang-Li](https://github.com/Yunxiang-Li).
