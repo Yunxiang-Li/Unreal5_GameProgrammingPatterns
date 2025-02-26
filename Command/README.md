@@ -53,7 +53,9 @@ While powerful, the Command pattern has some drawbacks:
 2. Command Pattern for Gameplay in Unreal (C++)
 
 `CommandBase`: A base command class derived from `UObject`, marked as abstract.
+
 `Command_UnitMove`: A child concrete command class derived from `CommandBase`, which has an `Execute` function to perform moving into certain location.
+
 `EliteUnit`: Contains a queue of commands, which allows execution in sequence.
 
 The Command pattern is a versatile and reusable design pattern in game development, providing structured control over actions, undo mechanics, and AI-driven behavior.
