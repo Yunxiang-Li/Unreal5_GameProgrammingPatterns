@@ -60,6 +60,8 @@ Details of each project are explain within each project's Readme file.
    - Interfaces for horizontal communication.
 11. [Singleton](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Singleton)<br>
    A brief introduction about singleton pattern.
+12. [Command](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Command)<br>
+   Implemented command pattern with two ways: Editor Utility Blueprints and C++.
        
 ## Maintainers
 
