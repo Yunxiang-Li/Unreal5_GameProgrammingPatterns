@@ -5,7 +5,7 @@
 The Command pattern introduces a layer of separation between requesting an action and executing it. This allows actions to be stored, executed, undone, or replayed, making it highly useful in game development. It is commonly used for undo functionality, input replays, queued actions, and AI behavior planning. In Unreal Engine, the Command pattern can be integrated into Blueprint Utilities for editor tools or implemented in C++ for gameplay mechanics.
 
 <div align="center"> 
-  <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/CommandPatternClassBase.jpg" alt="Command Pattern Class Base"/>
+  <img src="https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/blob/main/Screenshots/CommandPatternBaseClass.jpg" alt="Command Pattern Base Class "/>
 </div>
 
 ## Concept
