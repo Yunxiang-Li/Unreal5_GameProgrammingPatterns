@@ -58,6 +58,8 @@ Details of each project are explain within each project's Readme file.
    - Functions for downward communication
    - Events for upward communication
    - Interfaces for horizontal communication.
+11. [Singleton](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Singleton)<br>
+   A brief introduction about singleton pattern.
        
 ## Maintainers
 
