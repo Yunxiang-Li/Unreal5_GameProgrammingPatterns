@@ -62,6 +62,8 @@ Details of each project are explain within each project's Readme file.
    A brief introduction about singleton pattern.
 12. [Command](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/Command)<br>
    Implemented command pattern with two ways: Editor Utility Blueprints and C++.
+13. [State](https://github.com/Yunxiang-Li/Unreal5_GameProgrammingPatterns/tree/main/State)<br>
+   A brief introduction about state pattern.
        
 ## Maintainers
 
